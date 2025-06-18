@@ -56,10 +56,10 @@ O repositório está organizado em pastas separadas por questão. Cada subgrupo 
    git clone https://github.com/maelsilvatt/Probabilidade-Equipe-02-2025.2.git
    ```
 
-2. **Crie sua branch de trabalho:**
+2. **Mude para sua branch de trabalho:**
 
    ```bash
-   git checkout -b questao-xx
+   git checkout questao-xx
    ```
 
 3. **Trabalhe nos arquivos dentro da pasta correspondente (ex: `/q04/`)**
