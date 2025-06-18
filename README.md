@@ -29,13 +29,13 @@ O repositório está organizado em pastas separadas por questão. Cada subgrupo 
 * Estudo da média e desvio para diferentes valores de n (2, 5, 50).
 * Aplicação do Teorema do Limite Central.
 
-### 📗 Questão 4 – Intervalos de Confiança (Uniforme \[0, 6])
+### 📙 Questão 4 – Intervalos de Confiança (Uniforme \[0, 6])
 
 * Geração de 1200 amostras com n = 800.
 * Cálculo dos intervalos com 90%, 95% e 99% de confiança.
 * Verificação dos percentuais que contêm a média real.
 
-### 📙 Questão 12 – Geração via Inversa da FDA
+### 📗 Questão 12 – Geração via Inversa da FDA
 
 * Distribuição com fdp: `f(x) = 3e^(-3x)` para `x ≥ 0`.
 * Implementação da inversa da função de distribuição acumulada (FDA).
