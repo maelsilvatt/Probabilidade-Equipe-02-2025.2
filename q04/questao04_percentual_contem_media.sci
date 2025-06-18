@@ -1,0 +1,1 @@
+// Questão 4 - Verificação de percentuais que contêm a média real

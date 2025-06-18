@@ -1,0 +1,1 @@
+// Questão 2 - Simulação da distribuição exponencial
