@@ -91,12 +91,12 @@ O repositório está organizado em pastas separadas por questão. Cada subgrupo 
 - Kaique Damasceno Sousa  
 - Wanessa Rodrigues Santos  
 
-### 📗 Questão 4
+### 📙 Questão 4
 - Adrian Emanoel Oliveira Azevedo  
 - Marcos Guilherme Pereira Galdino  
 - Paulo Ricardo Sousa Menezes  
 
-### 📙 Questão 12
+### 📗 Questão 12
 - Luiz Miguel Rodrigues de Souza  
 - Thiago de Carvalho Silva Oliveira  
 
