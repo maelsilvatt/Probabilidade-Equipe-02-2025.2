@@ -79,7 +79,7 @@ O repositório está organizado em pastas separadas por questão. Cada subgrupo 
 ## 📝 Slides da Apresentação
 
 📄 **Disponível no Overleaf:**
-[Overleaf – UFC Modelo de Apresentação](https://pt.overleaf.com/6887641988qzzykdghghzw#a1aa90)
+[Overleaf – UFC Modelo de Apresentação](https://www.overleaf.com/read/gxyhxtwvnrzh#d6cf27)
 
 ---
 
