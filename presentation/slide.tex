@@ -1,0 +1,126 @@
+\documentclass[serif, aspectratio=169]{beamer}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{fourier}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{lipsum}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{UFCStyle}
+
+% Definições visuais
+\definecolor{hkustyellow}{RGB}{167, 131, 55}
+\definecolor{hkustblue}{RGB}{0, 56, 116}
+\definecolor{hkustred}{RGB}{209, 51, 59}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+% Informações da apresentação
+\title{Trabalho Final - Probabilidade e Estatística (2025.2)}
+\subtitle{Equipe 02}
+\author{
+Ismael S. Silva, Paulo R. S. Menezes, Ana N. M. de Araujo\and
+Kaique D. Sousa, Wanessa R. Santos, Eros R. Simette\and
+Thiago C. S. Oliveira, Pedro H. Q. da Silva\and
+Marcos G. P. Galdino, Luiz M. R. de Souza, Adrian E. O. Azevedo
+}
+\institute{Universidade Federal do Ceará}
+\date{\small \today}
+
+% Comandos customizados
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+
+\lstdefinelanguage{Portugol}{
+    morekeywords={
+        para, se, entao, fim, enquanto, funcao, retorna, inteiro, vetor, inicio,
+        verdadeiro, falso, cada, faca, repita, ate, caso, senao, escreva, leia
+    },
+    sensitive=true,
+    morecomment=[l]{//},
+    morestring=[b]",
+}
+
+% Definição do estilo para o Portugol
+\lstdefinelanguage{Portugol}{
+    morekeywords={
+        para, se, entao, fim, enquanto, funcao, retorna, inteiro, vetor, inicio,
+        verdadeiro, falso, cada, faca, repita, ate, caso, senao, escreva, leia
+    },
+    sensitive=true,
+    morecomment=[l]{//},
+    morestring=[b]",
+}
+
+\lstdefinestyle{portugolStyle}{
+    language=Portugol,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{gray}\itshape,
+    stringstyle=\color{orange},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=8pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    breaklines=true,
+    tabsize=4,
+    captionpos=b
+}
+
+% --- Início do documento ---
+\begin{document}
+
+% Slide de título
+\begin{frame}
+    \titlepage
+    \vspace*{-0.6cm}
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[keepaspectratio, scale=0.06]{figures/UFC.png}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+% Sumário
+\begin{frame}    
+\tableofcontents[sectionstyle=show,
+subsectionstyle=show/shaded/hide,
+subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+% Seções modulares
+\input{topics/1-introducao.tex}
+\input{topics/2-questao2.tex}
+\input{topics/3-questao4.tex}
+\input{topics/4-questao12.tex}
+\input{topics/5-questao17.tex}
+\input{topics/6-conclusao.tex}
+\input{topics/7-referencias.tex}
+
+% Slide final
+\begin{frame}
+\begin{center}
+{\Huge Obrigado pela atenção!}
+\vspace{1cm}
+
+\end{center}
+\end{frame}
+
+\end{document}
