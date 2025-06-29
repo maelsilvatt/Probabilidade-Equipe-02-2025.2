@@ -72,18 +72,6 @@ O repositório está organizado em pastas separadas por questão. Cada subgrupo 
    git push origin questao-xx
    ```
 
-5. **Abra um Pull Request para a branch principal.**
-
----
-
-## 📝 Slides da Apresentação
-
-📄 **Disponível no Overleaf:**
-[Trabalho Final- Probabilidade e Estatística (2025.2)
- Equipe 02](https://www.overleaf.com/read/gxyhxtwvnrzh#d6cf27)
-
----
-
 ## 🧩 Integrantes por Questões
 
 ### 📘 Questão 2
