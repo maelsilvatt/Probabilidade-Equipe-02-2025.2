@@ -1,1 +1,1 @@
-// Questão 4 - Cálculo dos intervalos de confiança
+// Questao 4 - Calculo dos intervalos de confianca

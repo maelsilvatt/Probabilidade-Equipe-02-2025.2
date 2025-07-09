@@ -1,1 +1,1 @@
-// Questão 4 - Geração de amostras para IC
+// Questao 4 - Geracao de amostras para IC
