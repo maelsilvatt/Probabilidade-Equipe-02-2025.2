@@ -1,6 +1,6 @@
 // Questão 12 - Comparação entre fdp teórica e histograma
 
-clc; clear;// xdel(winsid());  // Limpa console, variáveis e gráficos
+clc; clear; // Limpa console, variáveis 
 
 // Parâmetros da distribuição exponencial
 lambda = 3;
