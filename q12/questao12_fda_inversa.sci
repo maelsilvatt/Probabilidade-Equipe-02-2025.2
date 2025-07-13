@@ -1,5 +1,5 @@
 // Questão 12 - Geração da amostra com FDA inversa
-// 1. Definindo a distribuição alvo: Exponencial com lambda = 2
+// 1. Definindo a distribuição alvo: Exponencial com lambda = 3
 lambda = 3;
 true_mean = 1/lambda;  // Média teórica
 
