@@ -3,7 +3,7 @@
 // ==============================================
 clc; clear;  // Limpa console, variáveis
 
- //1. Definindo a distribuição alvo: Exponencial com lambda = 2
+ //1. Definindo a distribuição alvo: Exponencial com lambda = 3
 lambda = 3;
 true_mean = 1/lambda;  // Média teórica
 
