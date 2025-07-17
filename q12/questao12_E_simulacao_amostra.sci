@@ -1,4 +1,4 @@
-// Questão 12 - Geração e comparação da amostra com FDA inversa e grandclc; clear; // Limpa console e variáveis
+clc; clear; // Limpa console e variáveis
 
 // Parâmetros da distribuição exponencial
 lambda = 3;
