@@ -91,17 +91,18 @@ com
 \textbf{c)} Verifique o percentual dos intervalos estatísticos com grau de confiança de 90\% que realmente contem o valor real da média populacional de $\bar X$. E para os graus de confiança de 95\% e 99\%?
 
 \vspace{0.5em}
+
 \lstinputlisting[
   language=Scilab,
   basicstyle=\ttfamily\scriptsize,
-  caption={Verificação da proporção de cobertura}
+  caption={Verificação da proporção de cobertura (parte 1)}
 ]{../q04/questao04_percentual_contem_media.sci}
 \end{frame}
 
-\begin{frame}{Conclusão da Questão 4}
-\begin{itemize}
-  \item As médias amostrais de $U(0,6)$ aproximam-se de uma normal (TCL).
-  \item Os intervalos de confiança apresentaram cobertura próxima a 90\%, 95\% e 99\%.
-  \item Maior nível de confiança → intervalo mais largo → maior chance de conter $\mu=3$.
-\end{itemize}
+\begin{frame}[fragile]{Código: Verificação da Proporção de Cobertura (Parte 2)}
+\lstinputlisting[
+  language=Scilab,
+  basicstyle=\ttfamily\scriptsize,
+  caption={Verificação da proporção de cobertura (parte 2)}
+]{../q04/questao04_percentual_contem_media_2.sci}
 \end{frame}
