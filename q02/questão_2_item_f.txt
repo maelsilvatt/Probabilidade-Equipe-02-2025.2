@@ -1,0 +1,13 @@
+f) Conclusão teórica (manual)
+
+Teorema do Limite Central (TLC):
+A média de amostras independentes de uma variável aleatória, com média e variância finitas, tende a seguir uma distribuição normal à medida que o tamanho da amostra nn aumenta.
+
+Conclusão com base nos resultados:
+
+A média amostral Xˉ se aproxima da média populacional μ=1/λ=0,333 à medida que nn aumenta.
+
+O desvio padrão de Xˉ diminui com o aumento de n, indicando men
+or variabilidade.
+
+Os histogramas mostram que, para n=50, a distribuição das médias se aproxima de uma curva normal, como previsto pelo TLC.

@@ -1,1 +1,0 @@
-// Questão 2 - Geração de histogramas
