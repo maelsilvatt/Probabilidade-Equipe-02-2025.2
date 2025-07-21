@@ -1,1 +1,108 @@
 \section{Resolução Questão 4}
+
+\begin{frame}{Questão 4}
+Considere que $X_1,\dots,X_n$ consiste em $n$ observações de uma amostra aleatória com distribuição estatística contínua uniforme no intervalo $[0,6]$. Considere a v.a.\ $\bar X$ derivada das v.a.’s $X_1,\dots,X_n$ da seguinte forma:
+\[
+\bar X \;=\;\frac{x_1 + \cdots + x_n}{n}.
+\]
+\end{frame}
+
+\begin{frame}[fragile]{a) Geração das amostras}
+\textbf{a)} Gere um conjunto de 1200 amostras das v.a.’s $X_1,\dots,X_n$ com $n=800$ observações cada. Para cada uma das amostras geradas anteriormente calcule os valores de  $\bar X$.
+
+\vspace{0.5em}
+\textit{Por que?} Simular as médias amostrais de $U(0,6)$ para observar seu comportamento e fundamentar os cálculos de intervalo de confiança.
+
+\vspace{0.5em}
+\lstinputlisting[
+  language=Scilab,
+  basicstyle=\ttfamily\scriptsize,
+  caption={Geração das amostras e cálculo de $\bar X$}
+]{../q04/questao04_amostras_ic.sci}
+\end{frame}
+
+% Frame 1: Contexto e Normalização
+\begin{frame}{b) Intervalos de Confiança (1/3)}
+\textbf{b)} Para cada amostra das v.a.’s $X_1,\dots,X_n$ geradas no item anterior, construa o intervalo de confiança para a média populacional $\bar X$ com níveis de 90\%, 95\% e 99\%.
+
+\vspace{0.5em}
+Sabemos que cada amostra tem tamanho $n=800$ e, para $U(0,6)$, $\mu=3$. Desejamos
+\[
+P\bigl(L \le \bar X \le U\bigr) = \lambda,
+\]
+com $\lambda\in\{0.90,0.95,0.99\}$.
+
+\vspace{0.7em}
+Pelo Teorema do Limite Central:
+\[
+\bar X \;\overset{\text{aprox.}}{\sim}\;\mathcal N\!\bigl(\mu,\;\sigma/\sqrt{n}\bigr).
+\]
+Como $n$ é grande, usamos $\sigma\approx s$. Normalizando:
+\[
+Z = \frac{\bar X - \mu}{s/\sqrt{n}}
+\quad\Longrightarrow\quad
+Z \sim \mathcal N(0,1).
+\]
+\end{frame}
+
+% Frame 2: Construção do IC
+\begin{frame}{b) Intervalos de Confiança (2/3)}
+Após a normalização, temos
+\[
+P(Z_1 \le Z \le Z_2) = \lambda,
+\]
+onde
+\[
+P(Z_1 \le Z)=P\bigl(L \le \bar X\bigr)=\tfrac{1-\lambda}{2},
+\quad
+P(Z \le Z_2)=P\bigl(\bar X \le U\bigr)=\tfrac{1-\lambda}{2}.
+\]
+Como $Z_2=-Z_1=\rho$, segue
+\[
+P(-\rho \le Z \le \rho)=\lambda
+\;\Longrightarrow\;
+P\!\Bigl(\bar X - \rho\,\tfrac{s}{\sqrt n} \le \mu \le \bar X + \rho\,\tfrac{s}{\sqrt n}\Bigr).
+\]
+Assim, o intervalo de confiança é
+\[
+IC = \Bigl(\bar X - \rho\,\tfrac{s}{\sqrt n},\;\bar X + \rho\,\tfrac{s}{\sqrt n}\Bigr),
+\]
+com
+\[
+\rho =
+\begin{cases}
+1.645, & \lambda=0.90,\\
+1.960, & \lambda=0.95,\\
+2.576, & \lambda=0.99.
+\end{cases}
+\]
+\end{frame}
+
+% Frame 3: Código
+\begin{frame}[fragile]{b) Intervalos de Confiança (3/3)}
+\lstinputlisting[
+  language=Scilab,
+  basicstyle=\ttfamily\scriptsize,
+  caption={Cálculo dos intervalos de confiança}
+]{../q04/questao04_calculo_ic.sci}
+\end{frame}
+
+\begin{frame}[fragile]{c) Cobertura dos Intervalos}
+\textbf{c)} Verifique o percentual dos intervalos estatísticos com grau de confiança de 90\% que realmente contem o valor real da média populacional de $\bar X$. E para os graus de confiança de 95\% e 99\%?
+
+\vspace{0.5em}
+
+\lstinputlisting[
+  language=Scilab,
+  basicstyle=\ttfamily\scriptsize,
+  caption={Verificação da proporção de cobertura (parte 1)}
+]{../q04/questao04_percentual_contem_media.sci}
+\end{frame}
+
+\begin{frame}[fragile]{Código: Verificação da Proporção de Cobertura (Parte 2)}
+\lstinputlisting[
+  language=Scilab,
+  basicstyle=\ttfamily\scriptsize,
+  caption={Verificação da proporção de cobertura (parte 2)}
+]{../q04/questao04_percentual_contem_media_2.sci}
+\end{frame}
