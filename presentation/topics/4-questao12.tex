@@ -84,6 +84,11 @@ U = rand(n, 1);
 // 2. Aplicar a FDA inversa para obter a amostra exponencial
 amostra_fda = exponencial_inv(U, lambda);
 
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Item (b): Geração da Amostra (Scilab)}
+\begin{lstlisting}
 // Exibindo a média da amostra para verificação
 printf("Média amostral: %.4f\n", mean(amostra_fda));
 // Valor teórico esperado: 1/3 = 0.3333
@@ -124,7 +129,7 @@ legend(['Histograma (n=10000)'; 'PDF Teórica (λ=3)']);
 \frametitle{Comparação: PDF Teórica vs Histograma}
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/comparacao.png}
+    \includegraphics[width=0.55\textwidth]{figures/comparacao.png}
     \caption{O histograma da amostra se aproxima muito bem da curva da fdp teórica, validando o método de geração.}
     \label{fig:comparacao}
 \end{figure}

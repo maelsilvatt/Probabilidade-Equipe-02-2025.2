@@ -14,25 +14,69 @@ A produção coloca o prêmio de forma aleatória atrás de uma das portas. Apó
 \end{frame}
 
 % Slide 3: Código
-\begin{frame}[fragile]{Simulação}
- \begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/Captura de tela 2025-07-18 154707.png}
- \end{figure}
+\begin{frame}[fragile]{Simulação - Problema de Monty Hall}
+\begin{lstlisting}
+// --- Simulação do Problema de Monty Hall com Registro de Convergência ---
+
+// 1. Definição dos parâmetros
+num_simulacoes = 50000;
+nome_arquivo = "monty_hall_convergence.csv";
+
+// 2. Inicialização dos contadores e da matriz para armazenar os resultados
+vitorias_mantendo = 0;
+vitorias_trocando = 0;
+resultados_convergencia = zeros(num_simulacoes, 3);
+
+\end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]{Simulação}
- \begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/parte ok 2.png}
- \end{figure}
+\begin{frame}[fragile]{Simulação - Problema de Monty Hall}
+\begin{lstlisting}
+// 3. Loop principal da simulação
+for i = 1:num_simulacoes
+    porta_premiada = grand(1, 1, 'uin', 1, 3);      // Porta com o prêmio
+    escolha_inicial = grand(1, 1, 'uin', 1, 3);     // Escolha do participante
+
+    // Verifica se ganharíamos mantendo ou trocando a escolha
+    if escolha_inicial == porta_premiada then
+        vitorias_mantendo = vitorias_mantendo + 1;
+    else
+        vitorias_trocando = vitorias_trocando + 1;
+    end
+
+\end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]{Simulação}
- \begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{figures/Captura de tela 2025-07-18 160019.png}
- \end{figure}
+\begin{frame}[fragile]{Simulação - Problema de Monty Hall}
+\begin{lstlisting}
+    // Calcula as probabilidades acumuladas até o momento
+    prob_manter_atual = vitorias_mantendo / i;
+    prob_trocar_atual = vitorias_trocando / i;
+
+    // Armazena os dados de convergência
+    resultados_convergencia(i, :) = [i, prob_manter_atual, prob_trocar_atual];
+end      
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]{Simulação - Problema de Monty Hall}
+\begin{lstlisting}
+// 4. Salvamento dos resultados em arquivo CSV
+fid = mopen(nome_arquivo, 'w');
+if fid == -1 then
+    error("ERRO: Não foi possível criar ou abrir o arquivo para escrita: " + nome_arquivo);
+end
+
+// Escreve o cabeçalho do CSV
+mfprintf(fid, 'Iteracao,Prob_Manter,Prob_Trocar\n');
+
+// Grava os dados linha por linha
+for k = 1:size(resultados_convergencia, 1)
+    mfprintf(fid, '%d,%.6f,%.6f\n', resultados_convergencia(k, 1), resultados_convergencia(k, 2), resultados_convergencia(k, 3));
+end
+mclose(fid);
+\end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]{Convergência}
@@ -54,6 +98,7 @@ chance de ganhar trocando é o dobro da chance de ganhar sem trocar
     \label{fig:enter-label}
  \end{figure}
 \end{frame}
+
 % Slide 6: Resultado
 \begin{frame}{Solução}
 \textbf{Resposta correta: é melhor trocar de porta!}
