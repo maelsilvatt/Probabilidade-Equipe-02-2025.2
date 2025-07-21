@@ -1,0 +1,99 @@
+\documentclass[serif, aspectratio=169]{beamer}
+
+% --- Pacotes Principais ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fourier} % Pacote de fontes
+\usepackage{latexsym,xcolor,multicol,booktabs,calligra}
+\usepackage{pstricks,stackengine}
+\usepackage{lipsum}
+
+% --- Pacotes de Funcionalidades ---
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{UFCStyle} 
+
+% --- Configuração de Cores ---
+\definecolor{hkustyellow}{RGB}{167, 131, 55}
+\definecolor{hkustblue}{RGB}{0, 56, 116}
+\definecolor{hkustred}{RGB}{209, 51, 59}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+% --- Configuração do Pacote 'listings' (para blocos de código) ---
+\usepackage{listings}
+\lstset{    
+    basicstyle=\ttfamily\small,
+    frame=single,
+    breaklines=true,
+    inputencoding=utf8,
+    extendedchars=true,
+    commentstyle=\color{green!60!black},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    literate={á}{{\'a}}1 {ã}{{\~a}}1 {ç}{{\c{c}}}1 {é}{{\'e}}1 {ê}{{\^e}}1
+             {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {Á}{{\'A}}1 {Ã}{{\~A}}1
+             {Ç}{{\c{C}}}1 {É}{{\'E}}1 {Ê}{{\^E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+}
+
+% --- Informações da Apresentação ---
+\title{Trabalho Final - Probabilidade e Estatística (2025.2)}
+\subtitle{Equipe 02}
+\author{
+Ismael S. Silva, Paulo R. S. Menezes, Ana N. M. de Araujo\and
+Kaique D. Sousa, Wanessa R. Santos, Eros R. Simette\and
+Thiago C. S. Oliveira, Pedro H. Q. da Silva\and
+Marcos G. P. Galdino, Luiz M. R. de Souza, Adrian E. O. Azevedo
+}
+\institute{Universidade Federal do Ceará (UFC)}
+\date{\small \today}
+
+% Comandos customizados
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+
+% --- Início do documento ---
+\begin{document}
+
+% Slide de título
+\begin{frame}
+    \titlepage
+    \vspace*{-0.6cm}
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[keepaspectratio, scale=0.06]{figures/UFC.png}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+% Sumário
+\begin{frame}    
+\tableofcontents[sectionstyle=show,
+subsectionstyle=show/shaded/hide,
+subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+% Seções modulares
+\input{topics/2-questao2.tex}
+\input{topics/3-questao4.tex}
+\input{topics/4-questao12.tex}
+\input{topics/5-questao17.tex}
+\input{topics/7-referencias.tex}
+
+% Slide final
+\begin{frame}
+\begin{center}
+{\Huge Obrigado pela atenção!}
+\vspace{1cm}
+
+\end{center}
+\end{frame}
+
+\end{document}
