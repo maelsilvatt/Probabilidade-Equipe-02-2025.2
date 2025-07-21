@@ -1,1 +1,0 @@
-// Questão 12 - Comparação entre fdp teórica e histograma
