@@ -10,7 +10,7 @@ function x = exponencial_inv(u, lambda)
 endfunction
 
 // Gerando 1000 observações uniformes
- n = 1000;
+ n = 10000;
 U = rand(n, 1);  // Gera números uniformes [0,1]
 // Calculando estatísticas descritivas
 function mostrar_estatisticas(amostra, nome)
