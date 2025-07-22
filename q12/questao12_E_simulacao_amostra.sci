@@ -5,7 +5,7 @@ lambda = 3;
 true_mean = 1/lambda;
 
 // Gerar amostra usando FDA inversa
-n = 1000;
+n = 10000;
 U = rand(n, 1);
 amostra_fda = -log(1 - U)/lambda;
 
