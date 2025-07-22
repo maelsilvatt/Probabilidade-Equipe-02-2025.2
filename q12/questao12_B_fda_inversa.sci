@@ -9,8 +9,8 @@ function x = exponencial_inv(u, lambda)
     x = -log(1 - u)/lambda;
 endfunction
 
-// Gerando 10000 observações uniformes
- n = 10000;
+// Gerando 1000 observações uniformes
+ n = 1000;
 U = rand(n, 1);  // Gera números uniformes [0,1]
 // Calculando estatísticas descritivas
 function mostrar_estatisticas(amostra, nome)
